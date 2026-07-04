@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wi-Fi Trust Score Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .trusted {
+            background-color: #d4edda;
+        }
+
+        .safe {
+            background-color: #fff3cd;
+        }
+
+        .suspicious {
+            background-color: #ffe5b4;
+        }
+
+        .high-risk {
+            background-color: #f8d7da;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Smart Wi-Fi Trust Score Dashboard</h1>
+
+    <table>
+        <tr>
+            <th>IP Address</th>
+            <th>Vendor</th>
+            <th>Times Seen</th>
+            <th>Open Ports</th>
+            <th>Trust Score</th>
+            <th>Status</th>
+        </tr>
+
+        {% for device in devices %}
+
+            {% if device.trust_score >= 90 %}
+                {% set status = "TRUSTED" %}
+                {% set row_class = "trusted" %}
+            {% elif device.trust_score >= 70 %}
+                {% set status = "SAFE" %}
+                {% set row_class = "safe" %}
+            {% elif device.trust_score >= 40 %}
+                {% set status = "SUSPICIOUS" %}
+                {% set row_class = "suspicious" %}
+            {% else %}
+                {% set status = "HIGH RISK" %}
+                {% set row_class = "high-risk" %}
+            {% endif %}
+
+            <tr class="{{ row_class }}">
+                <td>{{ device.ip }}</td>
+                <td>{{ device.vendor }}</td>
+                <td>{{ device.times_seen }}</td>
+                <td>{{ device.open_ports }}</td>
+                <td>{{ device.trust_score }}/100</td>
+                <td>{{ status }}</td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>

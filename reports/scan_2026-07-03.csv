@@ -1,0 +1,11 @@
+Timestamp,IP Address,MAC Address,Vendor,Times Seen,Open Ports,Trust Score
+2026-07-03 21:26:03,192.168.9.1,40:ae:30:d6:55:bc,TP-Link Systems Inc,7,"23,53,80",100
+2026-07-03 21:26:03,192.168.9.100,d0:39:57:a9:8b:9d,Liteon Technology Corporation,7,"135,139,445",100
+2026-07-03 21:32:43,192.168.9.1,40:ae:30:d6:55:bc,TP-Link Systems Inc,8,"23,53,80",100
+2026-07-03 21:32:43,192.168.9.100,d0:39:57:a9:8b:9d,Liteon Technology Corporation,8,"135,139,445",100
+2026-07-03 21:33:21,192.168.9.1,40:ae:30:d6:55:bc,TP-Link Systems Inc,9,"23,53,80",100
+2026-07-03 21:33:21,192.168.9.100,d0:39:57:a9:8b:9d,Liteon Technology Corporation,9,"135,139,445",100
+2026-07-03 21:43:04,192.168.9.1,40:ae:30:d6:55:bc,TP-Link Systems Inc,11,"23,53,80",100
+2026-07-03 21:43:04,192.168.9.100,d0:39:57:a9:8b:9d,Liteon Technology Corporation,11,"135,139,445",100
+2026-07-03 21:43:40,192.168.9.1,40:ae:30:d6:55:bc,TP-Link Systems Inc,12,"23,53,80",100
+2026-07-03 21:43:40,192.168.9.100,d0:39:57:a9:8b:9d,Liteon Technology Corporation,12,"135,139,445",100
